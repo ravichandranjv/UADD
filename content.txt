@@ -1,0 +1,16 @@
+!define TEST_SYSTEM {slim}
+
+!define COMMAND_PATTERN {node E:\fitnesse\node_modules\slimjs\src\SlimJS %p}
+
+!path E:\fitnesse\slimtests\src
+
+|import|
+|twoscenarios|
+
+
+|script|twoscenarios            |missing word|word|
+|check |missingwordscenariotest|missing |
+
+|script|twoscenarios          |added word|added word added|
+|check |addedwordscenariotest|added                      |
+
